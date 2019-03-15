@@ -61,10 +61,30 @@ git checkout -b <name>
 合并某分支到当前分支：
 git merge <name>
 
+--no-ff方式的hebing
+git merge --no-ff -m "merge with no-ff" <name>
+
 删除分支：
 git branch -d <name>
 
-********
+分支合并图
+git log --graph
+
+分支合并情况
+git log --graph --pretty=oneline --abbrev-commit
+
+存储现场
+git stash
+
+查看工作现场
+git stash list
+
+恢复工作现场
+git stash apply[恢复] + git stash drop[删除]
+git stash pop [删除+恢复]
+
+恢复指定现场
+git stash apply stash @{0}
 
 
 
