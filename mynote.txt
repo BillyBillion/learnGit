@@ -31,13 +31,17 @@ git log
 git reflog
 
 
-丢弃工作区的修改【回复最近一次git commit或git add时的状态】
+回复最近一次git commit或git add时的状态
 git checkout -- filename
 
-删除文件 
-git rm
+从版本库删除文件 
+git rm filename
 
+关联本地仓库
+git remote add origin git@github.com:BillyBillion/learngit.git
 
+推送到远程【只有第一次需要加-u】
+git push -u origin master
 
 
 
