@@ -7,7 +7,7 @@ git add ./filename.format
 提交文件： 
 git commit -m "message"
 
-查看修改状态： 
+查看工作区状态： 
 git status
 
 查看修改内容：
