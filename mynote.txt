@@ -1,0 +1,14 @@
+初始化仓库：
+git init
+
+添加文件： 
+git add ./filename.format
+
+提交文件： 
+git commit -m "message"
+
+查看修改状态： 
+git status
+
+查看修改内容：
+git diff
