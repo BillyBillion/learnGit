@@ -67,11 +67,17 @@ git merge --no-ff -m "merge with no-ff" <name>
 删除分支：
 git branch -d <name>
 
+强行删除未合并的分支
+git branch -D <name>
+
 分支合并图
 git log --graph
 
 分支合并情况
 git log --graph --pretty=oneline --abbrev-commit
+
+指定本地分支dev与远程分支origin/dev的链接
+git branch --set-upstream-to=origin/dev dev
 
 存储现场
 git stash
@@ -85,6 +91,62 @@ git stash pop [删除+恢复]
 
 恢复指定现场
 git stash apply stash @{0}
+
+查看远程库信息
+git remote -v
+
+抓取远程的新提交
+git pull
+
+从本地推送分支
+git push origin <branch-name>
+
+在本地创建和远程对应的分支
+git checkout -b <branch-name> origin/branch-name
+
+建立本地分支与远程分支的关联 
+git branch --set-upstream branch-name origin/branch-name
+
+整理未push的分叉提交历史
+git rebase
+
+查看所有标签
+git tag
+
+查看标签信息
+git show tag-name
+
+打新标签
+git tag <tag-name>
+git tag -a <tag-name> -m "message" commit-id
+
+给历史提交打标签
+git tag  tag-name commit-id
+
+[标签总是和commit-id挂钩的]
+
+删除标签
+git tag -d tag-name
+
+推送标签到远程
+git push origin tag-name
+
+推送所有本地标签
+git  push origin --tags
+
+删除远程标签[先删除本地标签]
+git push origin :refs/tags/tag-name 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
